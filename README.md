@@ -1,1 +1,1 @@
-# Hackathon
+# IEEE Hackathon 2017
