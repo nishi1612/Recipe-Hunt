@@ -665,7 +665,13 @@ if($res){
 	for($x=0 ; $x<4;$x=$x+1){
 		if($fe=$res->fetch_object()){
 			if($x==0){?><h2 style="color:blue;font-size:60px;font-family:Bellefair" align="center">Recently Added Recipes </h2><p style="color:black;font-size: 20px;font-family:Fresca;" align="center">Have a look at newly added recipes to the site.<br>Below is the list of recipes recently added.</p><?php }
-			?><center><img src="<?php echo $fe->imagesrc;?>" align="center" width="30%" height="30%" class="img-rounded"></center><br><div class="one" align="center"><h3 style="color:red;font-family:Kite one;font-weight:bold;"><?php
+			?><center>
+                <!--<img src="<?php //echo $fe->imagesrc;?>" align="center" width="30%" height="30%" class="img-rounded">-->
+                <?php 
+                    //header("Content-type: image/jpg");
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $fe->image ).'"/>';
+                ?>
+                </center><br><div class="one" align="center"><h3 style="color:red;font-family:Kite one;font-weight:bold;"><?php
 			echo $fe->r_name;
 			echo "<br />";
 			echo "<br />";
