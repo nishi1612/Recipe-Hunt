@@ -406,7 +406,7 @@ font-weight: normal;
 margin: 0;
 }
 
-/* Footer Center */
+/* Footer Centers*/
 
 .footer-distributed .footer-center{
 width: 35%;
